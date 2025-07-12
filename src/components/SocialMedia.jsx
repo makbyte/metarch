@@ -1,5 +1,7 @@
 import Link from 'next/link'
 import clsx from 'clsx'
+import { FaFacebook, FaYoutube, FaLinkedin } from 'react-icons/fa'
+import { SiGooglemaps } from 'react-icons/si'
 
 function FacebookIcon(props) {
   return (
@@ -50,10 +52,26 @@ function DribbbleIcon(props) {
 }
 
 export const socialMediaProfiles = [
-  { title: 'Facebook', href: 'https://facebook.com', icon: FacebookIcon },
-  { title: 'Instagram', href: 'https://instagram.com', icon: InstagramIcon },
-  { title: 'India-Mart', href: 'https://github.com', icon: GitHubIcon },
-  { title: 'Google', href: 'https://dribbble.com', icon: DribbbleIcon },
+  {
+    title: 'Facebook',
+    href: 'https://facebook.com',
+    icon: <FaFacebook className="h-6 w-6 fill-current" />,
+  },
+  {
+    title: 'YouTube',
+    href: 'https://instagram.com',
+    icon: <FaYoutube className="h-6 w-6 fill-current" />,
+  },
+  {
+    title: 'LinkedIn',
+    href: 'https://github.com',
+    icon: <FaLinkedin className="h-6 w-6 fill-current" />,
+  },
+  {
+    title: 'Google Map',
+    href: 'https://dribbble.com',
+    icon: <SiGooglemaps className="h-6 w-6 fill-current" />,
+  },
 ]
 
 export function SocialMedia({ className, invert = false }) {
@@ -62,7 +80,7 @@ export function SocialMedia({ className, invert = false }) {
       role="list"
       className={clsx(
         'flex gap-x-10',
-        invert ? 'text-white' : 'text-neutral-950',
+        invert ? 'text-white' : 'text-[var(--bg)]',
         className,
       )}
     >
@@ -76,7 +94,8 @@ export function SocialMedia({ className, invert = false }) {
               invert ? 'hover:text-neutral-200' : 'hover:text-neutral-700',
             )}
           >
-            <socialMediaProfile.icon className="h-6 w-6 fill-current" />
+            {socialMediaProfile.icon}
+            {/* <socialMediaProfile.icon className="h-6 w-6 fill-current" /> */}
           </Link>
         </li>
       ))}

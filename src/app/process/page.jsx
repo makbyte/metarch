@@ -29,10 +29,10 @@ function Section({ title, image, children }) {
         <div className="mt-12 lg:mt-0 lg:w-[37rem] lg:flex-none lg:group-even/section:order-first">
           <FadeIn>
             <div
-              className="font-display text-base font-semibold before:text-neutral-300 before:content-['/_'] after:text-neutral-950 after:content-[counter(section,decimal-leading-zero)]"
+              className="font-display text-base font-semibold before:text-neutral-300 before:content-['/_'] after:text-[var(--bg)] after:content-[counter(section,decimal-leading-zero)]"
               aria-hidden="true"
             />
-            <h2 className="mt-2 font-display text-3xl font-medium tracking-tight text-neutral-950 sm:text-4xl">
+            <h2 className="mt-2 font-display text-3xl font-medium tracking-tight text-[var(--bg)] sm:text-4xl">
               {title}
             </h2>
             <div className="mt-6">{children}</div>
@@ -49,7 +49,7 @@ function Discover() {
       <div className="space-y-6 text-base text-neutral-600">
         <p>
           We work closely with our clients to understand their{' '}
-          <strong className="font-semibold text-neutral-950">needs</strong> and
+          <strong className="font-semibold text-[var(--bg)]">needs</strong> and
           goals, embedding ourselves in their every day operations to understand
           what makes their business tick.
         </p>
@@ -58,18 +58,18 @@ function Discover() {
           several weeks while our account managers focus on going through their
           trash. Our senior security experts then perform social engineering
           hacks to gain access to their{' '}
-          <strong className="font-semibold text-neutral-950">business</strong>{' '}
+          <strong className="font-semibold text-[var(--bg)]">business</strong>{' '}
           accounts — handing that information over to our forensic accounting
           team.
         </p>
         <p>
           Once the full audit is complete, we report back with a comprehensive{' '}
-          <strong className="font-semibold text-neutral-950">plan</strong> and,
+          <strong className="font-semibold text-[var(--bg)]">plan</strong> and,
           more importantly, a budget.
         </p>
       </div>
 
-      <h3 className="mt-12 font-display text-base font-semibold text-neutral-950">
+      <h3 className="mt-12 font-display text-base font-semibold text-[var(--bg)]">
         Included in this phase
       </h3>
       <TagList className="mt-4">
@@ -127,33 +127,33 @@ function Deliver() {
         <p>
           About halfway through the Build phase, we push each project out by 6
           weeks due to a change in{' '}
-          <strong className="font-semibold text-neutral-950">
+          <strong className="font-semibold text-[var(--bg)]">
             requirements
           </strong>
           . This allows us to increase the budget a final time before launch.
         </p>
         <p>
           Despite largely using pre-built components, most of the{' '}
-          <strong className="font-semibold text-neutral-950">progress</strong>{' '}
+          <strong className="font-semibold text-[var(--bg)]">progress</strong>{' '}
           on each project takes place in the final 24 hours. The development
           time allocated to each client is actually spent making augmented
           reality demos that go viral on social media.
         </p>
         <p>
           We ensure that the main pages of the site are{' '}
-          <strong className="font-semibold text-neutral-950">
+          <strong className="font-semibold text-[var(--bg)]">
             fully functional
           </strong>{' '}
           at launch — the auxiliary pages will, of course, be lorem ipusm shells
           which get updated as part of our exorbitant{' '}
-          <strong className="font-semibold text-neutral-950">
+          <strong className="font-semibold text-[var(--bg)]">
             maintenance
           </strong>{' '}
           retainer.
         </p>
       </div>
 
-      <h3 className="mt-12 font-display text-base font-semibold text-neutral-950">
+      <h3 className="mt-12 font-display text-base font-semibold text-[var(--bg)]">
         Included in this phase
       </h3>
       <List className="mt-8">

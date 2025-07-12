@@ -27,7 +27,7 @@ function PageLink({ page }) {
         position="left"
         className="relative flex flex-col items-start pl-8"
       >
-        <h3 className="mt-6 text-base font-semibold text-neutral-950">
+        <h3 className="mt-6 text-base font-semibold text-[var(--bg)]">
           {page.title}
         </h3>
         <time
@@ -39,7 +39,7 @@ function PageLink({ page }) {
         <p className="mt-2.5 text-base text-neutral-600">{page.description}</p>
         <Link
           href={page.href}
-          className="mt-6 flex gap-x-3 text-base font-semibold text-neutral-950 transition hover:text-neutral-700"
+          className="mt-6 flex gap-x-3 text-base font-semibold text-[var(--bg)] transition hover:text-neutral-700"
           aria-label={`Read more: ${page.title}`}
         >
           Read more
