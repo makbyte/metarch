@@ -53,7 +53,7 @@ export const MDXComponents = {
   TopTip({ children, className }) {
     return (
       <Border position="left" className={clsx('my-10 pl-8', className)}>
-        <p className="font-display text-sm font-bold tracking-widest text-neutral-950 uppercase">
+        <p className="font-display text-sm font-bold tracking-widest text-[var(--bg)] uppercase">
           Top tip
         </p>
         <div className="mt-4">{children}</div>

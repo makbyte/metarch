@@ -89,7 +89,7 @@ function CaseStudies({ caseStudies }) {
                     />
                   </Link>
                 </h3>
-                <p className="mt-6 flex gap-x-2 text-sm text-neutral-950">
+                <p className="mt-6 flex gap-x-2 text-sm text-[var(--bg)]">
                   <time
                     dateTime={caseStudy.date.split('-')[0]}
                     className="font-semibold"
@@ -101,7 +101,7 @@ function CaseStudies({ caseStudies }) {
                   </span>
                   <span>Case study</span>
                 </p>
-                <p className="mt-6 font-display text-2xl font-semibold text-neutral-950">
+                <p className="mt-6 font-display text-2xl font-semibold text-[var(--bg)]">
                   {caseStudy.title}
                 </p>
                 <p className="mt-4 text-base text-neutral-600">

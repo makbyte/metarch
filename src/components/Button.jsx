@@ -4,10 +4,10 @@ import '../styles/global.css'
 export function Button({ invert = false, className, children, ...props }) {
   className = clsx(
     className,
-    'inline-flex rounded-full px-4 py-1.5 text-sm font-semibold transition bg-[var(--bgBlue)] text-white hover:bg-blue-600',
+    'inline-flex rounded-full px-4 py-1.5 text-sm font-semibold transition bg-[var(--bg)] text-white hover:bg-[var(--bgSofter)]',
   )
   // invert
-  //     ? 'bg-[var(--bgBlue)] text-neutral-950 hover:bg-blue-600'
+  //     ? 'bg-[var(--bgBlue)] text-[var(--bg)] hover:bg-blue-600'
   //     : 'bg-[var(--bgBlue)] text-white hover:bg-blue-600',
   let inner = <span className="relative top-px">{children}</span>
 
