@@ -61,7 +61,7 @@ function Header({
           onMouseEnter={() => setLogoHovered(true)}
           onMouseLeave={() => setLogoHovered(false)}
         >
-          <Image src={MetarchLogo} className="h-20 w-full" />
+          <Image src={MetarchLogo} className="h-14 w-full lg:h-20" />
           {/* <Logomark
             className="h-8 sm:hidden"
             invert={invert}
@@ -265,10 +265,23 @@ function RootLayoutInner({ children }) {
 export function RootLayout({ children }) {
   let pathname = usePathname()
   let [logoHovered, setLogoHovered] = useState(false)
+  let shouldReduceMotion = useReducedMotion()
 
   return (
-    <RootLayoutContext.Provider value={{ logoHovered, setLogoHovered }}>
-      <RootLayoutInner key={pathname}>{children}</RootLayoutInner>
-    </RootLayoutContext.Provider>
+    <>
+      {pathname !== '/login' ? (
+        <RootLayoutContext.Provider value={{ logoHovered, setLogoHovered }}>
+          <RootLayoutInner key={pathname}>{children}</RootLayoutInner>
+        </RootLayoutContext.Provider>
+      ) : (
+        <RootLayoutContext.Provider value={{ logoHovered, setLogoHovered }}>
+          <MotionConfig
+            transition={shouldReduceMotion ? { duration: 0 } : undefined}
+          >
+            {children}
+          </MotionConfig>
+        </RootLayoutContext.Provider>
+      )}
+    </>
   )
 }

@@ -32,22 +32,23 @@ function Culture() {
         invert
       >
         <p>
-          We are a group of like-minded people who share the same core values.
+          At Metarch, we’re more than a team — we’re a community of thinkers,
+          builders, and doers who share a passion for innovation and excellence.{' '}
         </p>
       </SectionIntro>
       <Container className="mt-16">
         <GridList>
           <GridListItem title="Loyalty" invert>
-            Our team has been with us since the beginning because none of them
-            are allowed to have LinkedIn profiles.
+            We grow together — building long-term relationships based on
+            respect, commitment, and shared success.
           </GridListItem>
           <GridListItem title="Trust" invert>
-            We don’t care when our team works just as long as they are working
-            every waking second.
+            We prioritize outcomes over hours. Flexibility and accountability go
+            hand in hand.
           </GridListItem>
           <GridListItem title="Compassion" invert>
-            You never know what someone is going through at home and we make
-            sure to never find out.
+            We support each other — as professionals and as people. Life
+            happens, and we lead with empathy.
           </GridListItem>
         </GridList>
       </Container>
@@ -188,23 +189,27 @@ export default async function About() {
 
   return (
     <>
-      <PageIntro eyebrow="About us" title="Our strength is collaboration">
+      <PageIntro
+        eyebrow="About us"
+        title="Engineering smart solutions, together"
+      >
         <p>
-          We believe that our strength lies in our collaborative approach, which
-          puts our clients at the center of everything we do.
+          At Metarch, we believe collaboration is our sharpest tool. By working
+          closely with our clients, we design intelligent systems that deliver
+          precision, reliability, and scalable forming solutions — all tailored
+          to your real-world challenges.
         </p>
         <div className="mt-10 max-w-2xl space-y-6 text-base">
           <p>
-            Studio was started by three friends who noticed that developer
-            studios were charging clients double what an in-house team would
-            cost. Since the beginning, we have been committed to doing things
-            differently by charging triple instead.
+            Metarch was founded by a group of engineers who believed innovation
+            shouldn’t come with a bloated price tag or a bloated ego. We chose a
+            different path — one powered by curiosity, automation, and an
+            unhealthy obsession with mechanical perfection.
           </p>
           <p>
-            At Studio, we’re more than just colleagues — we’re a family. This
-            means we pay very little and expect people to work late. We want our
-            employees to bring their whole selves to work. In return, we just
-            ask that they keep themselves there until at least 6:30pm.
+            We’re not just building machines. We’re building trust,
+            partnerships, and a future where technology quietly does its job —
+            beautifully.
           </p>
         </div>
       </PageIntro>
@@ -220,12 +225,12 @@ export default async function About() {
 
       <Team />
 
-      <PageLinks
+      {/* <PageLinks
         className="mt-24 sm:mt-32 lg:mt-40"
         title="From the blog"
         intro="Our team of experienced designers and developers has just one thing on their mind; working on your ideas to draw a smile on the face of your users worldwide. From conducting Brand Sprints to UX Design."
         pages={blogArticles}
-      />
+      /> */}
 
       <ContactSection />
     </>

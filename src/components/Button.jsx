@@ -1,10 +1,16 @@
 import Link from 'next/link'
 import clsx from 'clsx'
 import '../styles/global.css'
-export function Button({ invert = false, className, children, ...props }) {
+export function Button({
+  invert = false,
+  className,
+  children,
+  flex,
+  ...props
+}) {
   className = clsx(
+    `${flex ? 'flex justify-self-end' : 'inline-flex'} rounded-full px-4 py-1.5 text-sm font-semibold transition bg-[var(--bg)] text-white hover:bg-[var(--bgSofter)]`,
     className,
-    'inline-flex rounded-full px-4 py-1.5 text-sm font-semibold transition bg-[var(--bg)] text-white hover:bg-[var(--bgSofter)]',
   )
   // invert
   //     ? 'bg-[var(--bgBlue)] text-[var(--bg)] hover:bg-blue-600'
