@@ -178,7 +178,7 @@ export default async function Home() {
 
   return (
     <>
-      <Container className="mt-24 sm:mt-32 md:mt-56">
+      <Container className="mt-24 sm:mt-28 md:mt-46">
         <FadeIn className="max-w-3xl">
           <h1 className="font-display text-5xl font-medium tracking-tight [text-wrap:balance] text-[var(--bg)] sm:text-7xl">
             Shaping the Future with Smart Forming Technology.

@@ -48,24 +48,26 @@ function Discover() {
     <Section title="Discover" image={{ src: imageWhiteboard }}>
       <div className="space-y-6 text-base text-neutral-600">
         <p>
-          We work closely with our clients to understand their{' '}
-          <strong className="font-semibold text-[var(--bg)]">needs</strong> and
-          goals, embedding ourselves in their every day operations to understand
-          what makes their business tick.
+          We immerse ourselves in your business to understand what{' '}
+          <strong className="font-semibold text-[var(--bg)]">truly </strong>{' '}
+          drives it. Our goal is to uncover insights that lead to meaningful
+          solutions — even if it means going a little... deeper than expected.
         </p>
         <p>
-          Our team of private investigators shadow the company director’s for
-          several weeks while our account managers focus on going through their
-          trash. Our senior security experts then perform social engineering
-          hacks to gain access to their{' '}
-          <strong className="font-semibold text-[var(--bg)]">business</strong>{' '}
-          accounts — handing that information over to our forensic accounting
-          team.
+          Our team works side-by-side with yours, analyzing operations, asking
+          the{' '}
+          <strong className="font-semibold text-[var(--bg)]">
+            tough questions
+          </strong>{' '}
+          , and occasionally rifling through metaphorical trash bins to find
+          hidden
         </p>
         <p>
-          Once the full audit is complete, we report back with a comprehensive{' '}
-          <strong className="font-semibold text-[var(--bg)]">plan</strong> and,
-          more importantly, a budget.
+          If necessary, we’ll deploy every tool in{' '}
+          <strong className="font-semibold text-[var(--bg)]">
+            our arsenal
+          </strong>{' '}
+          — including charm, spreadsheets, and occasionally, light espionage.
         </p>
       </div>
 
@@ -73,12 +75,11 @@ function Discover() {
         Included in this phase
       </h3>
       <TagList className="mt-4">
-        <TagListItem>In-depth questionnaires</TagListItem>
-        <TagListItem>Feasibility studies</TagListItem>
-        <TagListItem>Blood samples</TagListItem>
-        <TagListItem>Employee surveys</TagListItem>
+        <TagListItem>Deep-dive questionnaires</TagListItem>
+        <TagListItem>Employee interviews</TagListItem>
+        <TagListItem>Feasibility assessments</TagListItem>
+        <TagListItem>Market landscape review</TagListItem>
         <TagListItem>Proofs-of-concept</TagListItem>
-        <TagListItem>Forensic audit</TagListItem>
       </TagList>
     </Section>
   )
@@ -89,23 +90,13 @@ function Build() {
     <Section title="Build" image={{ src: imageLaptop, shape: 1 }}>
       <div className="space-y-6 text-base text-neutral-600">
         <p>
-          Based off of the discovery phase, we develop a comprehensive roadmap
-          for each product and start working towards delivery. The roadmap is an
-          intricately tangled mess of technical nonsense designed to drag the
-          project out as long as possible.
+          Based on deep insights from our discovery phase, we craft a clear,
+          intelligent roadmap aligned with your goals and technical vision.
         </p>
         <p>
-          Each client is assigned a key account manager to keep lines of
-          communication open and obscure the actual progress of the project.
-          They act as a buffer between the client’s incessant nagging and the
-          development team who are hard at work scouring open source projects
-          for code to re-purpose.
-        </p>
-        <p>
-          Our account managers are trained to only reply to client emails after
-          9pm, several days after the initial email. This reinforces the general
-          aura that we are very busy and dissuades clients from asking for
-          changes.
+          Our engineers then build precision-driven systems — combining smart
+          automation, seamless forming capabilities, and scalable architecture
+          that’s built to perform.
         </p>
       </div>
 
@@ -113,8 +104,8 @@ function Build() {
         author={{ name: 'Debra Fiscal', role: 'CEO of Unseal' }}
         className="mt-12"
       >
-        Studio were so regular with their progress updates we almost began to
-        think they were automated!
+        Metarch kept us in the loop every step of the way — it felt like working
+        with a machine that was built to communicate.
       </Blockquote>
     </Section>
   )
@@ -125,31 +116,11 @@ function Deliver() {
     <Section title="Deliver" image={{ src: imageMeeting, shape: 2 }}>
       <div className="space-y-6 text-base text-neutral-600">
         <p>
-          About halfway through the Build phase, we push each project out by 6
-          weeks due to a change in{' '}
-          <strong className="font-semibold text-[var(--bg)]">
-            requirements
-          </strong>
-          . This allows us to increase the budget a final time before launch.
-        </p>
-        <p>
-          Despite largely using pre-built components, most of the{' '}
-          <strong className="font-semibold text-[var(--bg)]">progress</strong>{' '}
-          on each project takes place in the final 24 hours. The development
-          time allocated to each client is actually spent making augmented
-          reality demos that go viral on social media.
-        </p>
-        <p>
-          We ensure that the main pages of the site are{' '}
-          <strong className="font-semibold text-[var(--bg)]">
-            fully functional
-          </strong>{' '}
-          at launch — the auxiliary pages will, of course, be lorem ipusm shells
-          which get updated as part of our exorbitant{' '}
-          <strong className="font-semibold text-[var(--bg)]">
-            maintenance
-          </strong>{' '}
-          retainer.
+          We launch with precision, ensuring every machine performs as expected
+          — with reliability,{' '}
+          <strong className="font-semibold text-[var(--bg)]">speed</strong>, and
+          scalability. Even after delivery, we stay connected, continuously
+          improving and adapting your systems for future needs.
         </p>
       </div>
 
@@ -158,16 +129,17 @@ function Deliver() {
       </h3>
       <List className="mt-8">
         <ListItem title="Testing">
-          Our projects always have 100% test coverage, which would be impressive
-          if our tests weren’t as porous as a sieve.
+          Rigorous QA ensures our machines operate like clockwork. And yes, our
+          tests do catch more than just typos.
         </ListItem>
         <ListItem title="Infrastructure">
-          To ensure reliability we only use the best Digital Ocean droplets that
-          $4 a month can buy.
+          We deploy on solid ground — reliable, scalable environments that punch
+          well above their weight (and price point).
         </ListItem>
         <ListItem title="Support">
-          Because we hold the API keys for every critical service your business
-          uses, you can expect a lifetime of support, and invoices, from us.
+          We stick around — not because we’re clingy, but because we’re
+          committed. With deep system knowledge (and yes, those critical API
+          keys), you can count on us for the long haul.
         </ListItem>
       </List>
     </Section>
@@ -186,42 +158,43 @@ function Values() {
 
       <SectionIntro
         eyebrow="Our values"
-        title="Balancing reliability and innovation"
+        title="Balancing innovation with what actually works
+"
       >
         <p>
-          We strive to stay at the forefront of emerging trends and
-          technologies, while completely ignoring them and forking that old
-          Rails project we feel comfortable using. We stand by our core values
-          to justify that decision.
+          We aim to stay ahead of the curve by exploring new technologies — but
+          sometimes, sticking with that rock-solid legacy system just feels
+          right. Innovation is important, but so is shipping on time.
         </p>
       </SectionIntro>
 
       <Container className="mt-24">
         <GridList>
           <GridListItem title="Meticulous">
-            The first part of any partnership is getting our designer to put
-            your logo in our template. The second step is getting them to do the
-            colors.
+            Every great partnership begins with precision — and a designer
+            placing your logo into our favorite layout. Step two? Matching your
+            brand colors like pros.
           </GridListItem>
           <GridListItem title="Efficient">
-            We pride ourselves on never missing a deadline which is easy because
-            most of the work was done years ago.
+            Deadlines don’t scare us. Most of the heavy lifting was done years
+            ago — we just make it look new again.
           </GridListItem>
           <GridListItem title="Adaptable">
-            Every business has unique needs and our greatest challenge is
-            shoe-horning those needs into something we already built.
+            Your business is unique. Our challenge? Elegantly fitting that
+            uniqueness into a framework we already love (and reused five times
+            this week).
           </GridListItem>
           <GridListItem title="Honest">
-            We are transparent about all of our processes, banking on the simple
-            fact our clients never actually read anything.
+            We believe in radical transparency. Thankfully, no one reads the
+            fine print, so we’re safe.
           </GridListItem>
           <GridListItem title="Loyal">
-            We foster long-term relationships with our clients that go beyond
-            just delivering a product, allowing us to invoice them for decades.
+            We build lasting client relationships that extend far beyond launch
+            — mostly so we can keep billing you in peace.
           </GridListItem>
           <GridListItem title="Innovative">
-            The technological landscape is always evolving and so are we. We are
-            constantly on the lookout for new open source projects to clone.
+            Tech is evolving fast — and so are we. Constantly scouting GitHub
+            for open-source magic we can lovingly “borrow” and improve.
           </GridListItem>
         </GridList>
       </Container>
@@ -240,9 +213,10 @@ export default function Process() {
     <>
       <PageIntro eyebrow="Our process" title="How we work">
         <p>
-          We believe in efficiency and maximizing our resources to provide the
-          best value to our clients. The primary way we do that is by re-using
-          the same five projects we’ve been developing for the past decade.
+          We believe in working smarter — not harder. By building on proven
+          solutions and refining what already works, we focus on delivering real
+          value, fast. Every project is tailored, efficient, and built with
+          purpose.
         </p>
       </PageIntro>
 
