@@ -61,7 +61,7 @@ function Header({
           onMouseEnter={() => setLogoHovered(true)}
           onMouseLeave={() => setLogoHovered(false)}
         >
-          <Image src={MetarchLogo} className="h-10 w-full lg:h-20 lg:w-full" />
+          <Image src={MetarchLogo} className="h-10 w-1/2 lg:h-20 lg:w-full" />
           {/* <Logomark
             className="h-8 sm:hidden"
             invert={invert}
