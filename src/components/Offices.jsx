@@ -5,7 +5,7 @@ function Office({ name, children, invert = false }) {
     <address
       className={clsx(
         'text-sm capitalize not-italic',
-        invert ? 'text-neutral-300' : 'text-neutral-600',
+        invert ? 'text-neutral-300' : 'text-[var(--bgSofter)]',
       )}
     >
       <strong className={invert ? 'text-white' : 'text-[var(--bg)]'}>

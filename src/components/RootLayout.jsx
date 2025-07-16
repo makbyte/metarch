@@ -61,7 +61,7 @@ function Header({
           onMouseEnter={() => setLogoHovered(true)}
           onMouseLeave={() => setLogoHovered(false)}
         >
-          <Image src={MetarchLogo} className="h-14 w-3/4 lg:h-20 lg:w-full" />
+          <Image src={MetarchLogo} className="h-10 w-full lg:h-20 lg:w-full" />
           {/* <Logomark
             className="h-8 sm:hidden"
             invert={invert}
@@ -73,7 +73,7 @@ function Header({
             filled={logoHovered}
           /> */}
         </Link>
-        <div className="flex items-center gap-x-8">
+        <div className="flex items-center gap-x-5 md:gap-x-8">
           <Button href="/contact" invert={invert}>
             Contact us
           </Button>

@@ -81,7 +81,7 @@ function ContactDetails() {
       <h2 className="font-display text-base font-semibold text-[var(--bg)]">
         Our offices
       </h2>
-      <p className="mt-6 text-base text-neutral-600">
+      <p className="mt-6 text-base text-[var(--bgSofter)]">
         Prefer doing things in person? We don’t but we have to list our
         addresses here for legal reasons.
       </p>
@@ -103,14 +103,14 @@ function ContactDetails() {
                 {item.split('').includes('@') ? (
                   <Link
                     href={`mailto:${item}`}
-                    className="text-neutral-600 hover:text-[var(--bg)]"
+                    className="text-[var(--bgSofter)] hover:text-[var(--bg)]"
                   >
                     {item}
                   </Link>
                 ) : (
                   <Link
                     href={`tel:${item}`}
-                    className="text-neutral-600 hover:text-[var(--bg)]"
+                    className="text-[var(--bgSofter)] hover:text-[var(--bg)]"
                   >
                     {item}
                   </Link>

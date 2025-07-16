@@ -104,7 +104,7 @@ function CaseStudies({ caseStudies }) {
                 <p className="mt-6 font-display text-2xl font-semibold text-[var(--bg)]">
                   {caseStudy.title}
                 </p>
-                <p className="mt-4 text-base text-neutral-600">
+                <p className="mt-4 text-base text-[var(--bgSofter)]">
                   {caseStudy.description}
                 </p>
               </article>
@@ -170,7 +170,7 @@ function Services() {
 
 export const metadata = {
   description:
-    'We are a development studio working at the intersection of design and technology.',
+    'Metarch delivers unmatched precision, speed, and adaptability through next-generation smart machines. ',
 }
 
 export default async function Home() {
@@ -183,7 +183,7 @@ export default async function Home() {
           <h1 className="font-display text-5xl font-medium tracking-tight [text-wrap:balance] text-[var(--bg)] sm:text-7xl">
             Shaping the Future with Smart Forming Technology.
           </h1>
-          <p className="mt-6 text-xl text-neutral-600">
+          <p className="mt-6 text-xl text-[var(--bgSofter)]">
             Metarch delivers unmatched precision, speed, and adaptability
             through next-generation smart machines. Our seamless forming
             capabilities empower industries to innovate faster, reduce waste,
@@ -195,8 +195,8 @@ export default async function Home() {
 
       <Clients />
 
-      <CaseStudies caseStudies={caseStudies} />
-
+      {/* <CaseStudies caseStudies={caseStudies} /> */}
+      {/* 
       <Testimonial
         className="mt-24 sm:mt-32 lg:mt-40"
         client={{ name: 'Phobia', logo: MetarchLogo, style: 'small' }}
@@ -204,7 +204,7 @@ export default async function Home() {
         The team at Metarch exceeded all expectations during onboarding — even
         streamlining complex integrations like microphone access without
         disrupting user experience.
-      </Testimonial>
+      </Testimonial> */}
 
       <Services />
 

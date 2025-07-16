@@ -60,7 +60,7 @@ function CaseStudies({ caseStudies }) {
                   <p className="font-display text-4xl font-medium text-[var(--bg)]">
                     <Link href={caseStudy.href}>{caseStudy.title}</Link>
                   </p>
-                  <div className="mt-6 space-y-6 text-base text-neutral-600">
+                  <div className="mt-6 space-y-6 text-base text-[var(--bgSofter)]">
                     {caseStudy.summary.map((paragraph) => (
                       <p key={paragraph}>{paragraph}</p>
                     ))}
