@@ -6,7 +6,10 @@ import { FadeIn, FadeInStagger } from '@/components/FadeIn'
 export function List({ children, className }) {
   return (
     <FadeInStagger>
-      <ul role="list" className={clsx('text-base text-neutral-600', className)}>
+      <ul
+        role="list"
+        className={clsx('text-base text-[var(--bgSofter)]', className)}
+      >
         {children}
       </ul>
     </FadeInStagger>

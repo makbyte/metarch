@@ -63,7 +63,7 @@ export default async function Blog() {
                           </div>
                         </dd>
                       </dl>
-                      <p className="mt-6 max-w-2xl text-base text-neutral-600">
+                      <p className="mt-6 max-w-2xl text-base text-[var(--bgSofter)]">
                         {article.description}
                       </p>
                       <Button

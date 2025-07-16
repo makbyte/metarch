@@ -46,7 +46,7 @@ function Section({ title, image, children }) {
 function Discover() {
   return (
     <Section title="Discover" image={{ src: imageWhiteboard }}>
-      <div className="space-y-6 text-base text-neutral-600">
+      <div className="space-y-6 text-base text-[var(--bgSofter)]">
         <p>
           We immerse ourselves in your business to understand what{' '}
           <strong className="font-semibold text-[var(--bg)]">truly </strong>{' '}
@@ -88,7 +88,7 @@ function Discover() {
 function Build() {
   return (
     <Section title="Build" image={{ src: imageLaptop, shape: 1 }}>
-      <div className="space-y-6 text-base text-neutral-600">
+      <div className="space-y-6 text-base text-[var(--bgSofter)]">
         <p>
           Based on deep insights from our discovery phase, we craft a clear,
           intelligent roadmap aligned with your goals and technical vision.
@@ -114,7 +114,7 @@ function Build() {
 function Deliver() {
   return (
     <Section title="Deliver" image={{ src: imageMeeting, shape: 2 }}>
-      <div className="space-y-6 text-base text-neutral-600">
+      <div className="space-y-6 text-base text-[var(--bgSofter)]">
         <p>
           We launch with precision, ensuring every machine performs as expected
           — with reliability,{' '}

@@ -13,7 +13,7 @@ export default function NotFound() {
         <h1 className="mt-4 font-display text-2xl font-semibold text-[var(--bg)]">
           Page not found
         </h1>
-        <p className="mt-2 text-sm text-neutral-600">
+        <p className="mt-2 text-sm text-[var(--bgSofter)]">
           Sorry, we couldn’t find the page you’re looking for.
         </p>
         <Link

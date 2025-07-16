@@ -44,7 +44,7 @@ export function SectionIntro({
           <div
             className={clsx(
               'mt-6 text-xl',
-              invert ? 'text-neutral-300' : 'text-neutral-600',
+              invert ? 'text-neutral-300' : 'text-[var(--bgSofter)]',
             )}
           >
             {children}
