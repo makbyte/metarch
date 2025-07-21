@@ -9,7 +9,7 @@ import {
   useState,
 } from 'react'
 import Link from 'next/link'
-import { usePathname } from 'next/navigation'
+import { usePathname, useRouter } from 'next/navigation'
 import clsx from 'clsx'
 import { motion, MotionConfig, useReducedMotion } from 'framer-motion'
 
@@ -23,6 +23,8 @@ import { SocialMedia } from '@/components/SocialMedia'
 import Image from 'next/image'
 import MetarchLogo from '@/images/metarchLogo.png'
 import '../styles/global.css'
+import { signOut } from 'firebase/auth'
+import { auth } from '../../lib/firebase'
 const RootLayoutContext = createContext(null)
 
 function XIcon(props) {
@@ -51,7 +53,13 @@ function Header({
   invert = false,
 }) {
   let { logoHovered, setLogoHovered } = useContext(RootLayoutContext)
-
+  const pathname = usePathname()
+  const router = useRouter()
+  const currentPathname = pathname.split('/').pop()
+  const handleLogout = async () => {
+    await signOut(auth)
+    router.push('/login')
+  }
   return (
     <Container>
       <div className="flex items-center justify-between">
@@ -61,7 +69,7 @@ function Header({
           onMouseEnter={() => setLogoHovered(true)}
           onMouseLeave={() => setLogoHovered(false)}
         >
-          <Image src={MetarchLogo} className="h-10 w-1/2 lg:h-20 lg:w-full" />
+          <Image src={MetarchLogo} className="h-12 w-[80%] lg:h-22 lg:w-full" />
           {/* <Logomark
             className="h-8 sm:hidden"
             invert={invert}
@@ -73,32 +81,41 @@ function Header({
             filled={logoHovered}
           /> */}
         </Link>
-        <div className="flex items-center gap-x-5 md:gap-x-8">
-          <Button href="/contact" invert={invert}>
-            Contact us
-          </Button>
-          <button
-            ref={toggleRef}
-            type="button"
-            onClick={onToggle}
-            aria-expanded={expanded ? 'true' : 'false'}
-            aria-controls={panelId}
-            className={clsx(
-              'group -m-2.5 rounded-full p-2.5 transition',
-              invert ? 'hover:bg-[var(--bg)]' : 'hover:bg-[var(--textSoft)]',
-            )}
-            aria-label="Toggle navigation"
-          >
-            <Icon
+        {currentPathname !== 'dashboard' ? (
+          <div className="flex items-center gap-x-5 md:gap-x-8">
+            <Button href="/contact" invert={invert}>
+              Contact us
+            </Button>
+            <button
+              ref={toggleRef}
+              type="button"
+              onClick={onToggle}
+              aria-expanded={expanded ? 'true' : 'false'}
+              aria-controls={panelId}
               className={clsx(
-                'h-6 w-6',
-                invert
-                  ? 'fill-[var(--bg)] group-hover:fill-neutral-200'
-                  : 'fill-[var(--bgSoft)] group-hover:fill-neutral-700',
+                'group -m-2.5 rounded-full p-2.5 transition',
+                invert ? 'hover:bg-[var(--bg)]' : 'hover:bg-[var(--textSoft)]',
               )}
-            />
+              aria-label="Toggle navigation"
+            >
+              <Icon
+                className={clsx(
+                  'h-6 w-6',
+                  invert
+                    ? 'fill-[var(--bg)] group-hover:fill-neutral-200'
+                    : 'fill-[var(--bgSoft)] group-hover:fill-neutral-700',
+                )}
+              />
+            </button>
+          </div>
+        ) : (
+          <button
+            onClick={handleLogout}
+            className="inline-flex rounded-full bg-[var(--bg)] px-4 py-1.5 text-sm font-semibold text-white transition hover:bg-[var(--bgSofter)]"
+          >
+            Logout
           </button>
-        </div>
+        )}
       </div>
     </Container>
   )
@@ -134,7 +151,7 @@ function Navigation() {
         <NavigationItem href="/about">About Us</NavigationItem>
       </NavigationRow>
       <NavigationRow>
-        <NavigationItem href="/process">Our Process</NavigationItem>
+        <NavigationItem href="/products">Our Products</NavigationItem>
         <NavigationItem href="/blog">Blog</NavigationItem>
       </NavigationRow>
     </nav>

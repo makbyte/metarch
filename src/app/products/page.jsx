@@ -1,3 +1,4 @@
+'use client'
 import { Blockquote } from '@/components/Blockquote'
 import { ContactSection } from '@/components/ContactSection'
 import { Container } from '@/components/Container'
@@ -12,6 +13,10 @@ import { TagList, TagListItem } from '@/components/TagList'
 import imageLaptop from '@/images/laptop.jpg'
 import imageMeeting from '@/images/meeting.jpg'
 import imageWhiteboard from '@/images/whiteboard.jpg'
+import { collection, getDocs, orderBy, query } from 'firebase/firestore'
+import { useEffect, useState } from 'react'
+import { db } from '../../../lib/firebase'
+import { ProductCard } from '@/components/ProductCard'
 
 function Section({ title, image, children }) {
   return (
@@ -202,30 +207,63 @@ function Values() {
   )
 }
 
-export const metadata = {
-  title: 'Our Process',
-  description:
-    'We believe in efficiency and maximizing our resources to provide the best value to our clients.',
-}
+// export const metadata = {
+//   title: 'Our Products',
+//   description:
+//     ' Our products are designed with purpose — blending innovation with proven solutions to solve real-world challenges. We prioritize  quality, efficiency, and user-centric design to deliver tools that make a difference. Each product is crafted to offer immediate value and long-term impact.',
+// }
 
 export default function Process() {
+  const [products, setProducts] = useState([])
+
+  useEffect(() => {
+    const fetchAllProducts = async () => {
+      try {
+        const q = query(
+          collection(db, 'products'),
+          orderBy('createdAt', 'desc'),
+        )
+        const snapshot = await getDocs(q)
+        const data = snapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() }))
+
+        console.log(data, 'data')
+
+        setProducts(data)
+      } catch (error) {
+        console.log('Error', error)
+      }
+    }
+    fetchAllProducts()
+  }, [])
+
   return (
     <>
-      <PageIntro eyebrow="Our process" title="How we work">
+      <PageIntro eyebrow="Our Products" title="What Sets Our Products Apart">
         <p>
-          We believe in working smarter — not harder. By building on proven
-          solutions and refining what already works, we focus on delivering real
-          value, fast. Every project is tailored, efficient, and built with
-          purpose.
+          Our products are designed with purpose — blending innovation with
+          proven solutions to solve real-world challenges. We prioritize
+          quality, efficiency, and user-centric design to deliver tools that
+          make a difference. Each product is crafted to offer immediate value
+          and long-term impact.
         </p>
       </PageIntro>
 
       <div className="mt-24 space-y-24 [counter-reset:section] sm:mt-32 sm:space-y-32 lg:mt-40 lg:space-y-40">
-        <Discover />
+        {/* <Discover />
         <Build />
-        <Deliver />
+        <Deliver /> */}
       </div>
-
+      {products?.length === 0 ? (
+        <p className="text-center text-gray-600 dark:text-gray-300">
+          No products found.
+        </p>
+      ) : (
+        <div className="grid grid-cols-1 gap-6 px-8 sm:grid-cols-2">
+          {products?.map((product) => (
+            <ProductCard key={product?.id} product={product} />
+          ))}
+        </div>
+      )}
       <Values />
 
       <ContactSection />

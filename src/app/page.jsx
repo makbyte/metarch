@@ -31,34 +31,34 @@ const clients = [
   ['North Adventures', logoNorthAdventures],
 ]
 
-function Clients() {
-  return (
-    <div className="mt-24 rounded-4xl bg-[var(--bg)] py-20 sm:mt-32 sm:py-32 lg:mt-56">
-      <Container>
-        <FadeIn className="flex items-center gap-x-8">
-          <h2 className="text-center font-display text-sm font-semibold tracking-wider text-white sm:text-left">
-            We’ve worked with hundreds of amazing people
-          </h2>
-          <div className="h-px flex-auto bg-[var(--bg)]" />
-        </FadeIn>
-        <FadeInStagger faster>
-          <ul
-            role="list"
-            className="mt-10 grid grid-cols-2 gap-x-8 gap-y-10 lg:grid-cols-4"
-          >
-            {clients.map(([client, logo]) => (
-              <li key={client}>
-                <FadeIn>
-                  <Image src={logo} alt={client} unoptimized />
-                </FadeIn>
-              </li>
-            ))}
-          </ul>
-        </FadeInStagger>
-      </Container>
-    </div>
-  )
-}
+// function Clients() {
+//   return (
+//     <div className="mt-24 rounded-4xl bg-[var(--bg)] py-20 sm:mt-32 sm:py-32 lg:mt-56">
+//       <Container>
+//         <FadeIn className="flex items-center gap-x-8">
+//           <h2 className="text-center font-display text-sm font-semibold tracking-wider text-white sm:text-left">
+//             We’ve worked with hundreds of amazing people
+//           </h2>
+//           <div className="h-px flex-auto bg-[var(--bg)]" />
+//         </FadeIn>
+//         <FadeInStagger faster>
+//           <ul
+//             role="list"
+//             className="mt-10 grid grid-cols-2 gap-x-8 gap-y-10 lg:grid-cols-4"
+//           >
+//             {clients.map(([client, logo]) => (
+//               <li key={client}>
+//                 <FadeIn>
+//                   <Image src={logo} alt={client} unoptimized />
+//                 </FadeIn>
+//               </li>
+//             ))}
+//           </ul>
+//         </FadeInStagger>
+//       </Container>
+//     </div>
+//   )
+// }
 
 function CaseStudies({ caseStudies }) {
   return (
@@ -193,7 +193,7 @@ export default async function Home() {
         </FadeIn>
       </Container>
 
-      <Clients />
+      {/* <Clients /> */}
 
       {/* <CaseStudies caseStudies={caseStudies} /> */}
       {/* 
@@ -206,7 +206,7 @@ export default async function Home() {
         disrupting user experience.
       </Testimonial> */}
 
-      <Services />
+      {/* <Services /> */}
 
       <ContactSection />
     </>
