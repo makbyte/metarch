@@ -77,56 +77,56 @@ const team = [
       },
     ],
   },
-  {
-    title: 'Team',
-    people: [
-      {
-        name: 'Chelsea Hagon',
-        role: 'Senior Developer',
-        image: { src: imageChelseaHagon },
-      },
-      {
-        name: 'Emma Dorsey',
-        role: 'Senior Designer',
-        image: { src: imageEmmaDorsey },
-      },
-      {
-        name: 'Leonard Krasner',
-        role: 'VP, User Experience',
-        image: { src: imageLeonardKrasner },
-      },
-      {
-        name: 'Blake Reid',
-        role: 'Junior Copywriter',
-        image: { src: imageBlakeReid },
-      },
-      {
-        name: 'Kathryn Murphy',
-        role: 'VP, Human Resources',
-        image: { src: imageKathrynMurphy },
-      },
-      {
-        name: 'Whitney Francis',
-        role: 'Content Specialist',
-        image: { src: imageWhitneyFrancis },
-      },
-      {
-        name: 'Jeffrey Webb',
-        role: 'Account Coordinator',
-        image: { src: imageJeffreyWebb },
-      },
-      {
-        name: 'Benjamin Russel',
-        role: 'Senior Developer',
-        image: { src: imageBenjaminRussel },
-      },
-      {
-        name: 'Angela Fisher',
-        role: 'Front-end Developer',
-        image: { src: imageAngelaFisher },
-      },
-    ],
-  },
+  // {
+  //   title: 'Team',
+  //   people: [
+  //     {
+  //       name: 'Chelsea Hagon',
+  //       role: 'Senior Developer',
+  //       image: { src: imageChelseaHagon },
+  //     },
+  //     {
+  //       name: 'Emma Dorsey',
+  //       role: 'Senior Designer',
+  //       image: { src: imageEmmaDorsey },
+  //     },
+  //     {
+  //       name: 'Leonard Krasner',
+  //       role: 'VP, User Experience',
+  //       image: { src: imageLeonardKrasner },
+  //     },
+  //     {
+  //       name: 'Blake Reid',
+  //       role: 'Junior Copywriter',
+  //       image: { src: imageBlakeReid },
+  //     },
+  //     {
+  //       name: 'Kathryn Murphy',
+  //       role: 'VP, Human Resources',
+  //       image: { src: imageKathrynMurphy },
+  //     },
+  //     {
+  //       name: 'Whitney Francis',
+  //       role: 'Content Specialist',
+  //       image: { src: imageWhitneyFrancis },
+  //     },
+  //     {
+  //       name: 'Jeffrey Webb',
+  //       role: 'Account Coordinator',
+  //       image: { src: imageJeffreyWebb },
+  //     },
+  //     {
+  //       name: 'Benjamin Russel',
+  //       role: 'Senior Developer',
+  //       image: { src: imageBenjaminRussel },
+  //     },
+  //     {
+  //       name: 'Angela Fisher',
+  //       role: 'Front-end Developer',
+  //       image: { src: imageAngelaFisher },
+  //     },
+  //   ],
+  // },
 ]
 
 function Team() {
