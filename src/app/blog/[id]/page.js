@@ -26,7 +26,7 @@ const SingleBlogPage = ({ params }) => {
       }
     }
     fetchSingleBlog()
-  }, [])
+  }, [id])
   if (!singleBlog) return <LoadingSpinner></LoadingSpinner>
 
   const { blogAuthor, blogTitle, blogDescription, blogImage, createdAt } =
