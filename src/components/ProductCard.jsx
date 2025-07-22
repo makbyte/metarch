@@ -54,7 +54,10 @@ export const ProductCard = ({ product }) => {
         </div>
 
         <h3 className="text-lg font-semibold text-gray-800 transition-colors duration-200 group-hover:text-gray-600 dark:text-white dark:group-hover:text-gray-400">
-          {product?.productName}
+          {product?.productName} -
+          {product?.createdAt?.seconds
+            ? new Date(product?.createdAt?.seconds * 1000).toLocaleDateString()
+            : 'Unknown Date'}
         </h3>
 
         <p className="mt-2 text-sm text-gray-600 dark:text-gray-300">

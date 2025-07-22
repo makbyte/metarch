@@ -226,8 +226,6 @@ export default function Process() {
         const snapshot = await getDocs(q)
         const data = snapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() }))
 
-        console.log(data, 'data')
-
         setProducts(data)
       } catch (error) {
         console.log('Error', error)
