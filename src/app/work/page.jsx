@@ -37,7 +37,7 @@ function CaseStudies({ caseStudies }) {
                   <div className="sm:flex sm:items-center sm:gap-x-6 lg:block">
                     <Image
                       src={caseStudy.logo}
-                      alt=""
+                      alt={caseStudy?.client}
                       className="h-16 w-16 flex-none"
                       unoptimized
                     />
