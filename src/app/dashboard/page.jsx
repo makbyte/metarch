@@ -14,7 +14,7 @@ import { db } from '../../../lib/firebase'
 const Dashboard = () => {
   const { loading, user } = useAuth()
   const router = useRouter()
-
+  const [formSubmitLoader, setFormSubmitLoader] = useState(false)
   const productImageRef = useRef(null)
   const blogImageRef = useRef(null)
 
@@ -66,6 +66,7 @@ const Dashboard = () => {
     }
 
     try {
+      setFormSubmitLoader(true)
       const formData = new FormData()
       formData.append('file', productData.productImage)
       formData.append('type', 'products')
@@ -92,6 +93,7 @@ const Dashboard = () => {
       }
 
       alert('Product uploaded successfully')
+      setFormSubmitLoader(false)
     } catch (error) {
       console.error('Error uploading product:', error)
       alert(error.message || 'Something went wrong')
@@ -107,6 +109,7 @@ const Dashboard = () => {
     }
 
     try {
+      setFormSubmitLoader(true)
       const formData = new FormData()
       formData.append('file', blogData.blogImage)
       formData.append('type', 'blogs')
@@ -135,6 +138,7 @@ const Dashboard = () => {
       }
 
       alert('Blog uploaded successfully')
+      setFormSubmitLoader(false)
     } catch (error) {
       console.error('Error uploading blog:', error)
       alert(error.message || 'Something went wrong')
@@ -214,7 +218,7 @@ const Dashboard = () => {
               type="submit"
               className="rounded-full bg-blue-600 px-6 py-2 text-sm font-semibold text-white transition hover:bg-blue-700"
             >
-              Add Product
+              {formSubmitLoader ? 'Loading....' : 'Add Product'}
             </button>
           </div>
         </form>
@@ -303,7 +307,7 @@ const Dashboard = () => {
               type="submit"
               className="rounded-full bg-blue-600 px-6 py-2 text-sm font-semibold text-white transition hover:bg-blue-700"
             >
-              Add Blog
+              {formSubmitLoader ? 'Loading...' : 'Add Blog'}
             </button>
           </div>
         </form>
