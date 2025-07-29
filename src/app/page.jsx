@@ -239,7 +239,7 @@ export default async function Home() {
           <PageIntro eyebrow="Applications" title="The Latest Applications" />
           <div className="flex flex-wrap items-center justify-center gap-6 md:justify-around">
             {ApplicationsData?.map((application, i) => {
-              return <Card data={application} />
+              return <Card data={application} key={application.title} />
             })}
           </div>
         </div>
