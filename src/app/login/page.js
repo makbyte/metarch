@@ -21,7 +21,7 @@ function TextInput({ label, type, onChange, ...props }) {
         id={id}
         {...props}
         placeholder=" "
-        className="peer block w-full border border-neutral-300 bg-transparent px-6 pt-12 pb-4 text-base text-[var(--bg)] ring-4 ring-transparent transition group-first:rounded-t-2xl group-last:rounded-b-2xl focus:border-neutral-950 focus:ring-neutral-950/5 focus:outline-none dark:border-neutral-600"
+        className="peer block w-full border border-neutral-300 bg-transparent px-6 pt-12 pb-4 text-base text-[var(--bg)] ring-4 ring-transparent transition group-first:rounded-t-2xl group-last:rounded-b-2xl focus:border-neutral-950 focus:ring-neutral-950/5 focus:outline-none"
       />
       <label
         htmlFor={id}
@@ -67,9 +67,8 @@ const Login = () => {
   }
 
   return (
-    <Container className="mt-16 w-full max-w-xl">
-      {/* Top-right Home Button */}
-      <div className="mb-4 flex justify-end">
+    <Container className="flex h-screen w-full max-w-xl flex-col items-center justify-center">
+      <div className="mb-10 flex justify-end">
         <Link
           href="/"
           className="rounded-full bg-blue-500 px-4 py-1.5 text-sm font-semibold text-white transition hover:bg-gray-100 hover:text-[var(--bg)]"
@@ -81,9 +80,9 @@ const Login = () => {
       <FadeIn className="w-full">
         <form
           onSubmit={handleLogin}
-          className="rounded-2xl bg-white p-8 shadow-lg dark:bg-gray-800"
+          className="rounded-2xl bg-white p-8 shadow-lg"
         >
-          <h2 className="mb-6 text-center font-display text-3xl font-semibold text-gray-900 dark:text-white">
+          <h2 className="mb-6 text-center font-display text-3xl font-semibold text-gray-900">
             Welcome to Login Form
           </h2>
 
@@ -105,7 +104,7 @@ const Login = () => {
           </div>
 
           {error && (
-            <div className="mt-4 rounded-xl bg-red-100 p-3 text-center text-sm text-red-600 dark:bg-red-400/10 dark:text-red-400">
+            <div className="mt-4 rounded-xl bg-red-100 p-3 text-center text-sm text-red-600">
               {error}
             </div>
           )}
@@ -113,7 +112,7 @@ const Login = () => {
           <div className="mt-8 flex justify-center">
             <Button
               type="submit"
-              className="bg-blue-600 px-10 hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600"
+              className="bg-blue-600 px-10 hover:bg-blue-700"
               flex={true}
             >
               Login

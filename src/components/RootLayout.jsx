@@ -98,7 +98,7 @@ function Header({
               aria-controls={panelId}
               className={clsx(
                 'group -m-2.5 rounded-full p-2.5 transition',
-                invert ? 'hover:bg-[var(--bg)]' : 'hover:bg-[var(--textSoft)]',
+                invert ? 'bg-[var(--bg)]' : 'bg-[var(--textSoft)]',
               )}
               aria-label="Toggle navigation"
             >
@@ -106,7 +106,7 @@ function Header({
                 className={clsx(
                   'h-6 w-6',
                   invert
-                    ? 'fill-[var(--bg)] group-hover:fill-neutral-200'
+                    ? 'fill-[#fff] group-hover:fill-neutral-200'
                     : 'fill-[var(--bgSoft)] group-hover:fill-neutral-700',
                 )}
               />
