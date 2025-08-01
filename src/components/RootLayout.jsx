@@ -73,7 +73,7 @@ function Header({
             <Image
               alt="Metarch Logo"
               src={MetarchLogo}
-              className="h-12 w-[40%] object-contain md:w-full lg:h-22"
+              className="h-12 w-20 object-contain md:w-full lg:h-22"
             />
           </div>
           {/* <Logomark
@@ -89,7 +89,11 @@ function Header({
         </Link>
         {currentPathname !== 'dashboard' ? (
           <div className="flex items-center gap-x-5 md:gap-x-8">
-            <Button href="/contact" invert={invert}>
+            <Button
+              href="/contact"
+              invert={invert}
+              className={'whitespace-nowrap'}
+            >
               Contact us
             </Button>
             <button
