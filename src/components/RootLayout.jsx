@@ -73,7 +73,7 @@ function Header({
             <Image
               alt="Metarch Logo"
               src={MetarchLogo}
-              className="h-12 w-20 object-contain md:w-full lg:h-22"
+              className="h-12 w-26 object-contain md:w-full lg:h-22"
             />
           </div>
           {/* <Logomark
