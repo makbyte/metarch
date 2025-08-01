@@ -98,7 +98,7 @@ function Header({
               aria-controls={panelId}
               className={clsx(
                 'group -m-2.5 rounded-full p-2.5 transition',
-                invert ? 'bg-[var(--bg)]' : 'bg-[var(--textSoft)]',
+                invert ? 'bg-[var(--bg)]' : 'bg-white',
               )}
               aria-label="Toggle navigation"
             >

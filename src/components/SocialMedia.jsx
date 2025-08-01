@@ -54,12 +54,12 @@ function DribbbleIcon(props) {
 export const socialMediaProfiles = [
   {
     title: 'Facebook',
-    href: 'https://facebook.com',
+    href: 'https://www.facebook.com/people/Metarch-Forming-Machines/pfbid02CZcKSu2hKKfKEiC6pdFJkYZtKNRKAVJ8DbdEmTjF3jpVxy2oDfc6rwU4kcmyYvrZl/',
     icon: <FaFacebook className="h-6 w-6 fill-current" />,
   },
   {
     title: 'YouTube',
-    href: 'https://instagram.com',
+    href: 'https://www.youtube.com/channel/UCknxkE2oQn3NOBYcFeqUYTA',
     icon: <FaYoutube className="h-6 w-6 fill-current" />,
   },
   {
@@ -89,6 +89,7 @@ export function SocialMedia({ className, invert = false }) {
           <Link
             href={socialMediaProfile.href}
             aria-label={socialMediaProfile.title}
+            target="_blank"
             className={clsx(
               'transition',
               invert ? 'hover:text-neutral-200' : 'hover:text-neutral-700',

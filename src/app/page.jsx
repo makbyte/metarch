@@ -22,6 +22,7 @@ import MetarchLogo from '@/images/metarchLogo.png'
 import { loadCaseStudies } from '@/lib/mdx'
 import { Card } from '@/components/Card'
 import { PageIntro } from '@/components/PageIntro'
+import { ApplicationsData } from '@/lib/data'
 const clients = [
   ['Phobia', logoPhobiaLight],
   ['Family Fund', logoFamilyFund],
@@ -33,48 +34,6 @@ const clients = [
   ['North Adventures', logoNorthAdventures],
 ]
 
-const ApplicationsData = [
-  {
-    bgSrc:
-      'https://images.unsplash.com/photo-1611429532458-f8bf8f6121fe?q=80&w=379&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-    title: 'Application 1',
-  },
-  {
-    bgSrc:
-      'https://images.unsplash.com/photo-1611429532458-f8bf8f6121fe?q=80&w=379&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-    title: 'Application 1',
-  },
-  {
-    bgSrc:
-      'https://plus.unsplash.com/premium_photo-1682597000871-82c0ab1298ae?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NTd8fGRpeXxlbnwwfHwwfHx8MA%3D%3D',
-    title: 'Application 1',
-  },
-  {
-    bgSrc:
-      'https://images.unsplash.com/photo-1611429532458-f8bf8f6121fe?q=80&w=379&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-    title: 'Application 1',
-  },
-  {
-    bgSrc:
-      'https://images.unsplash.com/photo-1611429532458-f8bf8f6121fe?q=80&w=379&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-    title: 'Application 1',
-  },
-  {
-    bgSrc:
-      'https://images.unsplash.com/photo-1611429532458-f8bf8f6121fe?q=80&w=379&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-    title: 'Application 1',
-  },
-  {
-    bgSrc:
-      'https://images.unsplash.com/photo-1611429532458-f8bf8f6121fe?q=80&w=379&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-    title: 'Application 1',
-  },
-  {
-    bgSrc:
-      'https://images.unsplash.com/photo-1611429532458-f8bf8f6121fe?q=80&w=379&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-    title: 'Application 1',
-  },
-]
 // function Clients() {
 //   return (
 //     <div className="mt-24 rounded-4xl bg-[var(--bg)] py-20 sm:mt-32 sm:py-32 lg:mt-56">
