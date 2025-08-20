@@ -81,9 +81,8 @@ function ContactDetails() {
       <h2 className="font-display text-base font-semibold text-[var(--bg)]">
         Our offices
       </h2>
-      <p className="mt-6 text-base text-[var(--bgSofter)]">
-        Prefer doing things in person? We don’t but we have to list our
-        addresses here for legal reasons.
+      <p className="mt-6 text-base text-[var(--bgSofter)] capitalize">
+        for a free consultation with our technical experts.
       </p>
 
       <Offices className="mt-10 grid grid-cols-1 gap-8 sm:grid-cols-2" />

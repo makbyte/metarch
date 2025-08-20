@@ -184,14 +184,17 @@ export default async function Home() {
       <Container className="mt-24 sm:mt-28 md:mt-46">
         <FadeIn className="max-w-3xl">
           <h1 className="font-display text-5xl font-medium tracking-tight [text-wrap:balance] text-[var(--bg)] sm:text-7xl">
-            Shaping the Future with Smart Forming Technology.
+            Welcome to Metarch Smart Machines, Seamless Forming
           </h1>
           <p className="mt-6 text-xl text-[var(--bgSofter)]">
-            Metarch delivers unmatched precision, speed, and adaptability
-            through next-generation smart machines. Our seamless forming
-            capabilities empower industries to innovate faster, reduce waste,
-            and achieve exceptional quality — all with intelligent automation at
-            the core.
+            At Metarch, we engineer advanced vacuum forming machines designed to
+            deliver precision, performance, and reliability. With a deep
+            commitment to innovation and customized manufacturing solutions, our
+            smart machines enable seamless forming processes that drive
+            productivity and quality across industries. Whether you're in
+            packaging, automotive, medical, or consumer products, Metarch
+            machines are built to adapt to your needs—ensuring accuracy,
+            repeatability, and ease of operation with every cycle.
           </p>
         </FadeIn>
         <div className="mt-20">
