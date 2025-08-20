@@ -17,7 +17,8 @@ function Culture() {
   return (
     <div className="mt-24 rounded-4xl bg-[var(--bg)] py-24 sm:mt-32 lg:mt-40 lg:py-32">
       <SectionIntro
-        eyebrow="Our culture"
+        eyebrow="Our Core Values
+"
         title="Balance your passion with your passion for life."
         invert
       >
@@ -28,17 +29,14 @@ function Culture() {
       </SectionIntro>
       <Container className="mt-16">
         <GridList>
-          <GridListItem title="Loyalty" invert>
-            We grow together — building long-term relationships based on
-            respect, commitment, and shared success.
+          <GridListItem title="Innovation" invert>
+            Always pushing boundaries with smart design and automation
           </GridListItem>
-          <GridListItem title="Trust" invert>
-            We prioritize outcomes over hours. Flexibility and accountability go
-            hand in hand.
+          <GridListItem title="Quality" invert>
+            Precision-built machines that stand the test of time
           </GridListItem>
-          <GridListItem title="Compassion" invert>
-            We support each other — as professionals and as people. Life
-            happens, and we lead with empathy.
+          <GridListItem title="Partnership" invert>
+            Long-term relationships with unmatched service and support
           </GridListItem>
         </GridList>
       </Container>
@@ -179,25 +177,27 @@ export default async function About() {
     <>
       <PageIntro
         eyebrow="About us"
-        title="Engineering smart solutions, together"
+        title="Driven by Innovation. Built on Precision.
+"
       >
         <p>
-          At Metarch, we believe collaboration is our sharpest tool. By working
-          closely with our clients, we design intelligent systems that deliver
-          precision, reliability, and scalable forming solutions — all tailored
-          to your real-world challenges.
+          At Metarch, we specialize in designing and manufacturing
+          state-of-the-art vacuum forming machines that power industries across
+          the globe. Founded with a vision to bring intelligent engineering and
+          cutting-edge technology together, we have grown into a trusted name
+          known for quality, customization, and customer-first service.
         </p>
         <div className="mt-10 max-w-2xl space-y-6 text-base">
           <p>
-            Metarch was founded by a group of engineers who believed innovation
-            shouldn’t come with a bloated price tag or a bloated ego. We chose a
-            different path — one powered by curiosity, automation, and an
-            unhealthy obsession with mechanical perfection.
+            Our mission is simple: to deliver smart machines that enable
+            seamless forming—making your production more efficient,
+            cost-effective, and consistent.
           </p>
           <p>
-            We’re not just building machines. We’re building trust,
-            partnerships, and a future where technology quietly does its job —
-            beautifully.
+            With a dedicated team of engineers, designers, and support
+            professionals, we work closely with clients to understand their
+            unique requirements and provide tailored vacuum forming solutions
+            that meet the highest standards of performance and reliability.
           </p>
         </div>
       </PageIntro>

@@ -32,10 +32,12 @@ export default function Blog() {
 
   return (
     <>
-      <PageIntro eyebrow="Blog" title="The latest articles and news">
+      <PageIntro eyebrow="Blog" title="Insights, Innovations & Industry Trends">
         <p>
-          Stay up-to-date with the latest industry news as our marketing team
-          finds new ways to re-purpose old CSS tricks articles.
+          Welcome to the Metarch Blog—your go-to resource for the latest in
+          vacuum forming technology, manufacturing trends, and expert tips.
+          Whether you're a production manager, engineer, or business owner, our
+          blog is here to help you stay ahead of the curve.
         </p>
       </PageIntro>
 

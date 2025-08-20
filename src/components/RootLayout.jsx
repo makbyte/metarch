@@ -62,7 +62,7 @@ function Header({
   }
   return (
     <Container>
-      <div className="flex items-center justify-between">
+      <div className="flex w-full items-center justify-between">
         <Link
           href="/"
           aria-label="Home"

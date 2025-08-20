@@ -162,7 +162,7 @@ function Values() {
       </div>
 
       <SectionIntro
-        eyebrow="Our values"
+        eyebrow="Our Product Range Includes"
         title="Balancing innovation with what actually works
 "
       >
@@ -175,31 +175,23 @@ function Values() {
 
       <Container className="mt-24">
         <GridList>
-          <GridListItem title="Meticulous">
-            Every great partnership begins with precision — and a designer
-            placing your logo into our favorite layout. Step two? Matching your
-            brand colors like pros.
+          <GridListItem title="Semi-Automatic Vacuum Forming Machines">
+            Ideal for medium-scale production with manual control and
+            flexibility.
           </GridListItem>
-          <GridListItem title="Efficient">
-            Deadlines don’t scare us. Most of the heavy lifting was done years
-            ago — we just make it look new again.
+          <GridListItem
+            title="Fully Automatic Vacuum Forming Machines
+"
+          >
+            Designed for high-volume, consistent output with minimal operator
+            intervention.
           </GridListItem>
-          <GridListItem title="Adaptable">
-            Your business is unique. Our challenge? Elegantly fitting that
-            uniqueness into a framework we already love (and reused five times
-            this week).
-          </GridListItem>
-          <GridListItem title="Honest">
-            We believe in radical transparency. Thankfully, no one reads the
-            fine print, so we’re safe.
-          </GridListItem>
-          <GridListItem title="Loyal">
-            We build lasting client relationships that extend far beyond launch
-            — mostly so we can keep billing you in peace.
-          </GridListItem>
-          <GridListItem title="Innovative">
-            Tech is evolving fast — and so are we. Constantly scouting GitHub
-            for open-source magic we can lovingly “borrow” and improve.
+          <GridListItem
+            title="Custom Vacuum Forming Solutions
+"
+          >
+            Tailor-made machines developed to suit your specific materials,
+            sizes, and applications.
           </GridListItem>
         </GridList>
       </Container>
@@ -236,13 +228,16 @@ export default function Process() {
 
   return (
     <>
-      <PageIntro eyebrow="Our Products" title="What Sets Our Products Apart">
+      <PageIntro
+        eyebrow="Our Products"
+        title=" Vacuum Forming Machines Designed for Performance"
+      >
         <p>
-          Our products are designed with purpose — blending innovation with
-          proven solutions to solve real-world challenges. We prioritize
-          quality, efficiency, and user-centric design to deliver tools that
-          make a difference. Each product is crafted to offer immediate value
-          and long-term impact.
+          Metarch offers a comprehensive range of vacuum forming machines built
+          to meet diverse production needs. Whether you're working with
+          thermoform packaging, automotive interiors, or custom molded
+          components, our machines are engineered to deliver high-quality
+          results with speed, precision, and repeatability.
         </p>
       </PageIntro>
 
