@@ -69,7 +69,7 @@ export const socialMediaProfiles = [
   },
   {
     title: 'Google Map',
-    href: 'https://dribbble.com',
+    href: '#',
     icon: <SiGooglemaps className="h-6 w-6 fill-current" />,
   },
 ]

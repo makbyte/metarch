@@ -191,7 +191,7 @@ export default async function Home() {
             deliver precision, performance, and reliability. With a deep
             commitment to innovation and customized manufacturing solutions, our
             smart machines enable seamless forming processes that drive
-            productivity and quality across industries. Whether you're in
+            productivity and quality across industries. Whether you&apos;re in
             packaging, automotive, medical, or consumer products, Metarch
             machines are built to adapt to your needs—ensuring accuracy,
             repeatability, and ease of operation with every cycle.

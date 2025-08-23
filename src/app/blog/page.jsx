@@ -36,8 +36,8 @@ export default function Blog() {
         <p>
           Welcome to the Metarch Blog—your go-to resource for the latest in
           vacuum forming technology, manufacturing trends, and expert tips.
-          Whether you're a production manager, engineer, or business owner, our
-          blog is here to help you stay ahead of the curve.
+          Whether you&apos;re a production manager, engineer, or business owner,
+          our blog is here to help you stay ahead of the curve.
         </p>
       </PageIntro>
 
@@ -98,7 +98,7 @@ export default function Blog() {
               </FadeIn>
             ))
           ) : (
-            <LoadingSpinner></LoadingSpinner>
+            <LoadingSpinner />
           )}
         </div>
       </Container>

@@ -234,7 +234,7 @@ export default function Process() {
       >
         <p>
           Metarch offers a comprehensive range of vacuum forming machines built
-          to meet diverse production needs. Whether you're working with
+          to meet diverse production needs. Whether you&apos;re working with
           thermoform packaging, automotive interiors, or custom molded
           components, our machines are engineered to deliver high-quality
           results with speed, precision, and repeatability.
