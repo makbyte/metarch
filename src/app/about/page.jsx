@@ -23,8 +23,8 @@ function Culture() {
         invert
       >
         <p>
-          At Metarch, we’re more than a team — we’re a community of thinkers,
-          builders, and doers who share a passion for innovation and excellence.{' '}
+          At Metarch, we&apos;re more than a team — we&apos;re a community of
+          thinkers, builders, and doers...
         </p>
       </SectionIntro>
       <Container className="mt-16">
