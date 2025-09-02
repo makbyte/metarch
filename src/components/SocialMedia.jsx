@@ -67,11 +67,11 @@ export const socialMediaProfiles = [
     href: 'https://github.com',
     icon: <FaLinkedin className="h-6 w-6 fill-current" />,
   },
-  {
-    title: 'Google Map',
-    href: '#',
-    icon: <SiGooglemaps className="h-6 w-6 fill-current" />,
-  },
+  // {
+  //   title: 'Google Map',
+  //   href: '#',
+  //   icon: <SiGooglemaps className="h-6 w-6 fill-current" />,
+  // },
 ]
 
 export function SocialMedia({ className, invert = false }) {

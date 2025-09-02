@@ -129,8 +129,15 @@ export function Footer() {
             <p className="text-sm text-neutral-700">
               © Metarch Inc. {new Date().getFullYear()}
             </p>
-            <p className="text-sm font-bold text-[var(--bg)]">
-              Powered By MAK Byte
+            <p className="text-sm font-bold text-gray-800">
+              Powered By{' '}
+              <a
+                href="https://makbyte.io/"
+                target="_"
+                className="text-blue-600 transition-all duration-200 ease-in-out hover:text-blue-700"
+              >
+                MAK &#123;Byte&#125;
+              </a>
             </p>
           </span>
         </div>
