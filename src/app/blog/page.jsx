@@ -12,8 +12,10 @@ import { collection, getDocs, orderBy, query } from 'firebase/firestore'
 import { db } from '../../../lib/firebase'
 import MetarchLogo from '@/images/metarchLogo.png'
 import LoadingSpinner from '@/components/LoadingSpinner'
+
 export default function Blog() {
   const [blogs, setBlogs] = useState([])
+  const [loading, setLoading] = useState(true)
 
   useEffect(() => {
     const getAllBlogs = async () => {
@@ -24,6 +26,8 @@ export default function Blog() {
         setBlogs(data)
       } catch (error) {
         console.error('Error fetching blogs:', error)
+      } finally {
+        setLoading(false)
       }
     }
 
@@ -43,24 +47,26 @@ export default function Blog() {
 
       <Container className="mt-24 sm:mt-32 lg:mt-40">
         <div className="space-y-24 lg:space-y-32">
-          {blogs?.length > 0 ? (
-            blogs?.map((article) => (
-              <FadeIn key={article?.id}>
+          {loading ? (
+            <div className="flex justify-center py-20">
+              <LoadingSpinner />
+            </div>
+          ) : blogs.length > 0 ? (
+            blogs.map((article) => (
+              <FadeIn key={article.id}>
                 <article>
                   <Border className="pt-16">
                     <div className="relative lg:-mx-4 lg:flex lg:justify-end">
                       <div className="pt-10 lg:w-2/3 lg:flex-none lg:px-4 lg:pt-0">
                         <h2 className="font-display text-2xl font-semibold text-[var(--bg)]">
-                          <Link href={`/blog/${article?.id}`}>
-                            {article?.blogTitle}
+                          <Link href={`/blog/${article.id}`}>
+                            {article.blogTitle}
                           </Link>
                         </h2>
                         <dl className="lg:absolute lg:top-0 lg:left-0 lg:w-1/3 lg:px-4">
                           <dt className="sr-only">Published</dt>
                           <dd className="absolute top-0 left-0 text-sm text-[var(--bg)] lg:static">
-                            {/* <time dateTime={article.createdAt?.toDate?.()}>
-                            {formatDate(article.createdAt?.toDate?.())}
-                          </time> */}
+                            {/* Format date if you want */}
                           </dd>
                           <dt className="sr-only">Author</dt>
                           <dd className="mt-6 flex gap-x-4">
@@ -75,18 +81,18 @@ export default function Blog() {
                             </div>
                             <div className="text-sm text-[var(--bg)]">
                               <div className="font-semibold">
-                                {article?.blogAuthor}
+                                {article.blogAuthor}
                               </div>
                               <div>CEO</div>
                             </div>
                           </dd>
                         </dl>
                         <p className="mt-6 line-clamp-3 max-w-2xl text-base text-[var(--bgSofter)]">
-                          {article?.blogDescription}
+                          {article.blogDescription}
                         </p>
                         <Link
-                          href={`/blog/${article?.id}`}
-                          aria-label={`Read more: ${article?.blogTitle}`}
+                          href={`/blog/${article.id}`}
+                          aria-label={`Read more: ${article.blogTitle}`}
                           className="mt-8 inline-flex rounded-full bg-[var(--bg)] px-4 py-1.5 text-sm font-semibold text-white transition hover:bg-[var(--bgSofter)]"
                         >
                           Read more
@@ -98,7 +104,11 @@ export default function Blog() {
               </FadeIn>
             ))
           ) : (
-            <LoadingSpinner />
+            <div className="py-20 text-center">
+              <p className="text-lg font-medium text-[var(--bgSofter)]">
+                🚫 No blogs found.
+              </p>
+            </div>
           )}
         </div>
       </Container>
@@ -107,3 +117,4 @@ export default function Blog() {
     </>
   )
 }
+a
