@@ -64,7 +64,7 @@ export const socialMediaProfiles = [
   },
   {
     title: 'LinkedIn',
-    href: 'https://github.com',
+    href: '#',
     icon: <FaLinkedin className="h-6 w-6 fill-current" />,
   },
   // {
