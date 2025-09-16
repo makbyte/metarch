@@ -65,9 +65,7 @@ export default function Blog() {
                         </h2>
                         <dl className="lg:absolute lg:top-0 lg:left-0 lg:w-1/3 lg:px-4">
                           <dt className="sr-only">Published</dt>
-                          <dd className="absolute top-0 left-0 text-sm text-[var(--bg)] lg:static">
-                            {/* Format date if you want */}
-                          </dd>
+                          <dd className="absolute top-0 left-0 text-sm text-[var(--bg)] lg:static"></dd>
                           <dt className="sr-only">Author</dt>
                           <dd className="mt-6 flex gap-x-4">
                             <div className="flex h-20 w-20 items-center justify-center overflow-hidden rounded-xl bg-neutral-100">
@@ -117,4 +115,3 @@ export default function Blog() {
     </>
   )
 }
-a
