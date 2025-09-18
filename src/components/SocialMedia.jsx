@@ -62,11 +62,11 @@ export const socialMediaProfiles = [
     href: 'https://www.youtube.com/channel/UCknxkE2oQn3NOBYcFeqUYTA',
     icon: <FaYoutube className="h-6 w-6 fill-current" />,
   },
-  {
-    title: 'LinkedIn',
-    href: '#',
-    icon: <FaLinkedin className="h-6 w-6 fill-current" />,
-  },
+  // {
+  //   title: 'LinkedIn',
+  //   href: 'https://www.youtube.com/channel/UCknxkE2oQn3NOBYcFeqUYTA',
+  //   icon: <FaLinkedin className="h-6 w-6 fill-current" />,
+  // },
   // {
   //   title: 'Google Map',
   //   href: '#',
