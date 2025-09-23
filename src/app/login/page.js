@@ -21,7 +21,7 @@ function TextInput({ label, type, onChange, ...props }) {
         id={id}
         {...props}
         placeholder=" "
-        className="peer block w-full border border-neutral-300 bg-transparent px-6 pt-12 pb-4 text-base text-[var(--bg)] ring-4 ring-transparent transition group-first:rounded-t-2xl group-last:rounded-b-2xl focus:border-neutral-950 focus:ring-neutral-950/5 focus:outline-none"
+        className="peer block w-full rounded-2xl border border-neutral-300 bg-transparent px-6 pt-12 pb-4 text-base text-[var(--bg)] ring-4 ring-transparent transition focus:border-neutral-950 focus:ring-neutral-950/5 focus:outline-none"
       />
       <label
         htmlFor={id}
@@ -67,8 +67,8 @@ const Login = () => {
   }
 
   return (
-    <Container className="flex h-screen w-full max-w-xl flex-col items-center justify-center">
-      <div className="mb-10 flex justify-end">
+    <div className="m-0 flex h-screen w-full max-w-7xl flex-col items-center justify-center px-4">
+      <div className="mb-10 flex max-w-7xl justify-end">
         <Link
           href="/"
           className="rounded-full bg-blue-500 px-4 py-1.5 text-sm font-semibold text-white transition hover:bg-gray-100 hover:text-[var(--bg)]"
@@ -77,10 +77,10 @@ const Login = () => {
         </Link>
       </div>
 
-      <FadeIn className="w-full">
+      <FadeIn className="w-full max-w-2xl">
         <form
           onSubmit={handleLogin}
-          className="rounded-2xl bg-white p-8 shadow-lg"
+          className="w-full rounded-2xl bg-white p-8 shadow-lg"
         >
           <h2 className="mb-6 text-center font-display text-3xl font-semibold text-gray-900">
             Welcome to Login Form
@@ -120,7 +120,7 @@ const Login = () => {
           </div>
         </form>
       </FadeIn>
-    </Container>
+    </div>
   )
 }
 
