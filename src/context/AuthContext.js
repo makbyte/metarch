@@ -1,5 +1,10 @@
 'use client'
-import { onAuthStateChanged } from 'firebase/auth'
+
+import {
+  onAuthStateChanged,
+  setPersistence,
+  browserLocalPersistence,
+} from 'firebase/auth'
 import React, { createContext, useContext, useEffect, useState } from 'react'
 import { auth } from '../../lib/firebase'
 
@@ -8,16 +13,25 @@ export const useAuth = () => useContext(AuthContext)
 
 export const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null)
-
   const [loading, setLoading] = useState(true)
+
   useEffect(() => {
-    const unsubscribe = onAuthStateChanged(
-      auth,
-      (currentUser) => setUser(currentUser),
-      setLoading(false),
-    )
-    return () => unsubscribe()
+    // Ensure session persists across refresh
+    setPersistence(auth, browserLocalPersistence)
+      .then(() => {
+        const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
+          setUser(currentUser)
+          setLoading(false)
+        })
+
+        return () => unsubscribe()
+      })
+      .catch((error) => {
+        console.error('Error setting persistence:', error)
+        setLoading(false)
+      })
   }, [])
+
   return (
     <AuthContext.Provider value={{ user, loading }}>
       {children}
