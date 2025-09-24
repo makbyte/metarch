@@ -35,7 +35,7 @@ export default function Layout({ children }) {
               leave your email and we&apos;ll let you know the moment we launch.
             </p>
 
-            <form className="mt-6 flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
+            {/* <form className="mt-6 flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
               <input
                 type="email"
                 placeholder="Enter your email"
@@ -47,7 +47,7 @@ export default function Layout({ children }) {
               >
                 Notify Me
               </button>
-            </form>
+            </form> */}
           </div>
         </main>
 
