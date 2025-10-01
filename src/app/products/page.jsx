@@ -17,6 +17,7 @@ import { collection, getDocs, orderBy, query } from 'firebase/firestore'
 import { useEffect, useState } from 'react'
 import { db } from '../../../lib/firebase'
 import { ProductCard } from '@/components/ProductCard'
+import LoadingSpinner from '@/components/LoadingSpinner'
 
 function Section({ title, image, children }) {
   return (
@@ -207,6 +208,7 @@ function Values() {
 
 export default function Process() {
   const [products, setProducts] = useState([])
+  const [loading, setLoading] = useState(true)
 
   useEffect(() => {
     const fetchAllProducts = async () => {
@@ -221,6 +223,8 @@ export default function Process() {
         setProducts(data)
       } catch (error) {
         console.log('Error', error)
+      } finally {
+        setLoading(false)
       }
     }
     fetchAllProducts()
@@ -242,11 +246,12 @@ export default function Process() {
       </PageIntro>
 
       <div className="mt-24 space-y-24 [counter-reset:section] sm:mt-32 sm:space-y-32 lg:mt-40 lg:space-y-40">
-        {/* <Discover />
-        <Build />
-        <Deliver /> */}
+        {/* Future sections: Discover / Build / Deliver */}
       </div>
-      {products?.length === 0 ? (
+
+      {loading ? (
+        <LoadingSpinner fullPage={false} message="Fetching products..." />
+      ) : products?.length === 0 ? (
         <p className="text-center text-gray-600 dark:text-gray-300">
           No products found.
         </p>
@@ -257,8 +262,8 @@ export default function Process() {
           ))}
         </div>
       )}
-      <Values />
 
+      <Values />
       <ContactSection />
     </>
   )

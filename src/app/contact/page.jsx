@@ -1,3 +1,4 @@
+'use client'
 import { useId } from 'react'
 import Link from 'next/link'
 
@@ -8,7 +9,7 @@ import { FadeIn } from '@/components/FadeIn'
 import { Offices } from '@/components/Offices'
 import { PageIntro } from '@/components/PageIntro'
 import { SocialMedia } from '@/components/SocialMedia'
-
+import { useForm, ValidationError } from '@formspree/react'
 function TextInput({ label, ...props }) {
   let id = useId()
 
@@ -43,14 +44,30 @@ function RadioInput({ label, ...props }) {
     </label>
   )
 }
+import { useEffect, useRef } from 'react'
 
 function ContactForm() {
+  const id = process.env.NEXT_PUBLIC_FORMSPREE_ID
+  const [state, handleSubmit] = useForm(id)
+  const formRef = useRef(null)
+
+  useEffect(() => {
+    if (state.succeeded && formRef.current) {
+      formRef.current.reset()
+    }
+  }, [state.succeeded])
+
   return (
     <FadeIn className="lg:order-last">
-      <form>
+      <form ref={formRef} onSubmit={handleSubmit}>
         <h2 className="font-display text-base font-semibold text-[var(--bg)]">
           Work inquiries
         </h2>
+
+        {state.succeeded && (
+          <p className="mb-4 text-green-600">✅ Thanks for Connecting!</p>
+        )}
+
         <div className="isolate mt-6 -space-y-px rounded-2xl bg-white/50">
           <TextInput label="Name" name="name" autoComplete="name" />
           <TextInput
@@ -67,8 +84,9 @@ function ContactForm() {
           <TextInput label="Phone" type="tel" name="phone" autoComplete="tel" />
           <TextInput label="Message" name="message" />
         </div>
-        <Button type="submit" className="mt-10">
-          Let’s work together
+
+        <Button type="submit" className="mt-10" disabled={state.submitting}>
+          {state.submitting ? 'Sending...' : 'Let’s work together'}
         </Button>
       </form>
     </FadeIn>
@@ -128,11 +146,6 @@ function ContactDetails() {
       </Border>
     </FadeIn>
   )
-}
-
-export const metadata = {
-  title: 'Contact Us',
-  description: 'Let’s work together. We can’t wait to hear from you.',
 }
 
 export default function Contact() {
