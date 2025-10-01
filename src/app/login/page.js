@@ -1,7 +1,6 @@
 'use client'
 
 import { Button } from '@/components/Button'
-import { Container } from '@/components/Container'
 import { FadeIn } from '@/components/FadeIn'
 import { signInWithEmailAndPassword } from 'firebase/auth'
 import { useRouter } from 'next/navigation'
@@ -13,7 +12,7 @@ function TextInput({ label, type, onChange, ...props }) {
   let id = useId()
 
   return (
-    <div className="group relative z-0 transition-all focus-within:z-10">
+    <div className="relative z-0 w-full">
       <input
         required
         onChange={(e) => onChange(e)}
@@ -21,11 +20,11 @@ function TextInput({ label, type, onChange, ...props }) {
         id={id}
         {...props}
         placeholder=" "
-        className="peer block w-full rounded-2xl border border-neutral-300 bg-transparent px-6 pt-12 pb-4 text-base text-[var(--bg)] ring-4 ring-transparent transition focus:border-neutral-950 focus:ring-neutral-950/5 focus:outline-none"
+        className="peer block w-full rounded-xl border border-gray-300 bg-transparent px-4 pt-10 pb-3 text-base text-gray-900 ring-2 ring-transparent transition focus:border-blue-600 focus:ring-blue-100 focus:outline-none"
       />
       <label
         htmlFor={id}
-        className="pointer-events-none absolute top-1/2 left-6 -mt-3 origin-left text-base text-neutral-500 transition-all duration-200 peer-not-placeholder-shown:-translate-y-4 peer-not-placeholder-shown:scale-75 peer-not-placeholder-shown:font-semibold peer-not-placeholder-shown:text-[var(--bg)] peer-focus:-translate-y-4 peer-focus:scale-75 peer-focus:font-semibold peer-focus:text-[var(--bg)]"
+        className="pointer-events-none absolute top-1/2 left-4 -mt-4 origin-left text-gray-500 transition-all duration-200 peer-placeholder-shown:top-1/2 peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 peer-focus:top-3 peer-focus:text-sm peer-focus:font-semibold peer-focus:text-blue-600"
       >
         {label}
       </label>
@@ -67,26 +66,26 @@ const Login = () => {
   }
 
   return (
-    <div className="m-0 flex h-screen w-full max-w-7xl flex-col items-center justify-center px-4">
-      <div className="mb-10 flex max-w-7xl justify-end">
+    <div className="flex min-h-screen w-full flex-col items-center justify-center bg-[var(--bg)] px-4">
+      <div className="absolute top-6 right-6">
         <Link
           href="/"
-          className="rounded-full bg-blue-500 px-4 py-1.5 text-sm font-semibold text-white transition hover:bg-gray-100 hover:text-[var(--bg)]"
+          className="rounded-full bg-blue-600 px-4 py-2 text-sm font-semibold text-white shadow transition hover:bg-blue-700"
         >
           Home
         </Link>
       </div>
 
-      <FadeIn className="w-full max-w-2xl">
+      <FadeIn className="w-full max-w-md">
         <form
           onSubmit={handleLogin}
-          className="w-full rounded-2xl bg-white p-8 shadow-lg"
+          className="w-full rounded-2xl border border-gray-200 bg-white p-8 shadow-xl"
         >
-          <h2 className="mb-6 text-center font-display text-3xl font-semibold text-gray-900">
-            Welcome to Login Form
+          <h2 className="mb-8 text-center font-display text-2xl font-semibold text-gray-900">
+            Welcome Back 👋
           </h2>
 
-          <div className="-space-y-px">
+          <div className="space-y-6">
             <TextInput
               label="Email"
               type="email"
@@ -104,7 +103,7 @@ const Login = () => {
           </div>
 
           {error && (
-            <div className="mt-4 rounded-xl bg-red-100 p-3 text-center text-sm text-red-600">
+            <div className="mt-4 rounded-lg bg-red-100 p-3 text-center text-sm text-red-600">
               {error}
             </div>
           )}
@@ -112,7 +111,7 @@ const Login = () => {
           <div className="mt-8 flex justify-center">
             <Button
               type="submit"
-              className="bg-blue-600 px-10 hover:bg-blue-700"
+              className="bg-blue-600 px-10 py-2 hover:bg-blue-700"
               flex={true}
             >
               Login

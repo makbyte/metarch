@@ -38,7 +38,7 @@ const Dashboard = () => {
   }, [user, loading, router])
 
   if (loading || !user) {
-    return <LoadingSpinner />
+    return <LoadingSpinner fullPage />
   }
 
   const handleProductInput = (e) => {

@@ -89,7 +89,7 @@ function NewsletterForm() {
         Subscribe for the latest updates on intelligent manufacturing,
         breakthrough technologies, and innovations — straight to your inbox.
       </p>
-      <div className="relative mt-6">
+      {/* <div className="relative mt-6">
         <input
           type="email"
           placeholder="Email address"
@@ -106,7 +106,7 @@ function NewsletterForm() {
             <ArrowIcon className="w-4" />
           </button>
         </div>
-      </div>
+      </div> */}
     </form>
   )
 }
