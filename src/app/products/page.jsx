@@ -16,7 +16,6 @@ import imageWhiteboard from '@/images/whiteboard.jpg'
 import { collection, getDocs, orderBy, query } from 'firebase/firestore'
 import { useEffect, useState } from 'react'
 import { db } from '../../../lib/firebase'
-import { ProductCard } from '@/components/ProductCard'
 
 function Section({ title, image, children }) {
   return (
@@ -205,26 +204,66 @@ function Values() {
 //     ' Our products are designed with purpose — blending innovation with proven solutions to solve real-world challenges. We prioritize  quality, efficiency, and user-centric design to deliver tools that make a difference. Each product is crafted to offer immediate value and long-term impact.',
 // }
 
+import { ProductCard } from '@/components/ProductCard'
 export default function Process() {
+  const [categories, setCategories] = useState([])
+  const [activeCategory, setActiveCategory] = useState(null)
+  const [loading, setLoading] = useState(true)
   const [products, setProducts] = useState([])
+  const [productLoading, setProductLoading] = useState(true)
 
   useEffect(() => {
-    const fetchAllProducts = async () => {
+    const fetchCategories = async () => {
       try {
-        const q = query(
-          collection(db, 'products'),
-          orderBy('createdAt', 'desc'),
-        )
-        const snapshot = await getDocs(q)
-        const data = snapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() }))
-
-        setProducts(data)
+        const snapshot = await getDocs(collection(db, 'categories'))
+        const data = snapshot.docs.map((doc) => ({
+          id: doc.id,
+          ...doc.data(),
+        }))
+        setCategories(data)
       } catch (error) {
-        console.log('Error', error)
+        console.log('Error fetching categories:', error)
+      } finally {
+        setLoading(false)
       }
     }
-    fetchAllProducts()
+
+    fetchCategories()
   }, [])
+
+  useEffect(() => {
+    if (categories.length > 0 && !activeCategory) {
+      setActiveCategory(categories[0].name)
+    }
+  }, [categories])
+
+  useEffect(() => {
+    if (!activeCategory) return
+
+    const fetchProducts = async () => {
+      setProductLoading(true)
+
+      try {
+        const snapshot = await getDocs(collection(db, 'products'))
+        const allProducts = snapshot.docs.map((doc) => ({
+          id: doc.id,
+          ...doc.data(),
+        }))
+
+        const filtered = allProducts.filter(
+          (product) => product.productCategory === activeCategory,
+        )
+
+        setProducts(filtered)
+      } catch (error) {
+        console.error(error)
+      } finally {
+        setProductLoading(false)
+      }
+    }
+
+    fetchProducts()
+  }, [activeCategory])
 
   return (
     <>
@@ -246,14 +285,41 @@ export default function Process() {
         <Build />
         <Deliver /> */}
       </div>
-      {products?.length === 0 ? (
+
+      {loading ? (
+        <p className="mt-40 text-center text-gray-600 dark:text-gray-300">
+          Loading...
+        </p>
+      ) : categories.length === 0 ? (
         <p className="text-center text-gray-600 dark:text-gray-300">
-          No products found.
+          No categories found.
         </p>
       ) : (
-        <div className="grid grid-cols-1 gap-6 px-8 sm:grid-cols-2">
-          {products?.map((product) => (
-            <ProductCard key={product?.id} product={product} />
+        <div className="grid grid-cols-1 gap-6 px-8 sm:grid-cols-5">
+          {categories.map((category) => (
+            <button
+              key={category.id}
+              onClick={() => setActiveCategory(category.name)}
+              className={`rounded-full px-5 py-2 text-sm font-semibold transition ${
+                activeCategory === category.name
+                  ? 'bg-black text-white'
+                  : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
+              }`}
+            >
+              {category.name}
+            </button>
+          ))}
+        </div>
+      )}
+
+      {categories.length > 0 && productLoading ? (
+        <p className="mt-20 text-center">Loading products...</p>
+      ) : products.length === 0 ? (
+        <p className="mt-20 text-center">No products found.</p>
+      ) : (
+        <div className="mt-20 grid grid-cols-1 gap-6 px-8 sm:grid-cols-2">
+          {products.map((product) => (
+            <ProductCard key={product.id} product={product} />
           ))}
         </div>
       )}
