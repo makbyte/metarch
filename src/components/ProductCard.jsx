@@ -46,7 +46,7 @@ export const ProductCard = ({ product }) => {
           <motion.img
             src={product?.productImage}
             alt={product?.productName}
-            className="h-80 w-full object-cover transition-transform duration-500 group-hover:scale-105"
+            className="h-80 w-full object-cover transition-transform duration-500"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.6 }}
@@ -54,10 +54,7 @@ export const ProductCard = ({ product }) => {
         </div>
 
         <h3 className="text-lg font-semibold text-gray-800 transition-colors duration-200 group-hover:text-gray-600 dark:text-white dark:group-hover:text-gray-400">
-          {product?.productName} -
-          {product?.createdAt?.seconds
-            ? new Date(product?.createdAt?.seconds * 1000).toLocaleDateString()
-            : 'Unknown Date'}
+          {product?.productName}
         </h3>
 
         <p className="mt-2 text-sm text-gray-600 dark:text-gray-300">
